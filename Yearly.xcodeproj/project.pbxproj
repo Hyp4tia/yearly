@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1B2C3D40000000000000F0 /* YearlyWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1B2C3D40000000000000EA /* YearlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1B2C3D4000000000000101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1B2C3D40000000000000E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1B2C3D40000000000000E4;
+			remoteInfo = Yearly;
+		};
+		A1B2C3D4000000000000103 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1B2C3D40000000000000E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1B2C3D40000000000000F00;
+			remoteInfo = YearlyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1B2C3D40000000000000EF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1B2C3D40000000000000F0 /* YearlyWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A1B2C3D40000000000000E6 /* Yearly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yearly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B2C3D40000000000000E7 /* YearlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YearlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B2C3D40000000000000EA /* YearlyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YearlyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A1B2C3D40000000000000E8 /* Yearly */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Yearly; sourceTree = "<group>"; };
+		A1B2C3D40000000000000E9 /* YearlyTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = YearlyTests; sourceTree = "<group>"; };
+		A1B2C3D40000000000000EB /* YearlyWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = YearlyWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1B2C3D40000000000000ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B2C3D40000000000000F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B2C3D40000000000000F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1B2C3D40000000000000E2 = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D40000000000000E8 /* Yearly */,
+				A1B2C3D40000000000000E9 /* YearlyTests */,
+				A1B2C3D40000000000000EB /* YearlyWidget */,
+				A1B2C3D40000000000000E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1B2C3D40000000000000E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D40000000000000E6 /* Yearly.app */,
+				A1B2C3D40000000000000E7 /* YearlyTests.xctest */,
+				A1B2C3D40000000000000EA /* YearlyWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1B2C3D40000000000000E4 /* Yearly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B2C3D40000000000000F8 /* Build configuration list for PBXNativeTarget "Yearly" */;
+			buildPhases = (
+				A1B2C3D40000000000000F1 /* Sources */,
+				A1B2C3D40000000000000F2 /* Frameworks */,
+				A1B2C3D40000000000000F3 /* Resources */,
+				A1B2C3D40000000000000EF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1B2C3D4000000000000102 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A1B2C3D40000000000000E8 /* Yearly */,
+			);
+			name = Yearly;
+			productName = Yearly;
+			productReference = A1B2C3D40000000000000E6 /* Yearly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1B2C3D40000000000000E5 /* YearlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B2C3D40000000000000F9 /* Build configuration list for PBXNativeTarget "YearlyTests" */;
+			buildPhases = (
+				A1B2C3D40000000000000F4 /* Sources */,
+				A1B2C3D40000000000000F5 /* Frameworks */,
+				A1B2C3D40000000000000F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1B2C3D4000000000000100 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A1B2C3D40000000000000E9 /* YearlyTests */,
+			);
+			name = YearlyTests;
+			productName = YearlyTests;
+			productReference = A1B2C3D40000000000000E7 /* YearlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1B2C3D40000000000000F00 /* YearlyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B2C3D40000000000000F01 /* Build configuration list for PBXNativeTarget "YearlyWidgetExtension" */;
+			buildPhases = (
+				A1B2C3D40000000000000EC /* Sources */,
+				A1B2C3D40000000000000ED /* Frameworks */,
+				A1B2C3D40000000000000EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A1B2C3D40000000000000EB /* YearlyWidget */,
+			);
+			name = YearlyWidgetExtension;
+			productName = YearlyWidgetExtension;
+			productReference = A1B2C3D40000000000000EA /* YearlyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1B2C3D40000000000000E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A1B2C3D40000000000000E4 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A1B2C3D40000000000000E5 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A1B2C3D40000000000000E4;
+					};
+					A1B2C3D40000000000000F00 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A1B2C3D40000000000000F7 /* Build configuration list for PBXProject "Yearly" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1B2C3D40000000000000E2;
+			minimizedProjectReferenceProxies = 1;
+			productRefGroup = A1B2C3D40000000000000E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1B2C3D40000000000000E4 /* Yearly */,
+				A1B2C3D40000000000000E5 /* YearlyTests */,
+				A1B2C3D40000000000000F00 /* YearlyWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1B2C3D40000000000000EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B2C3D40000000000000F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B2C3D40000000000000F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1B2C3D40000000000000EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B2C3D40000000000000F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B2C3D40000000000000F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1B2C3D4000000000000100 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1B2C3D40000000000000E4 /* Yearly */;
+			targetProxy = A1B2C3D4000000000000101 /* PBXContainerItemProxy */;
+		};
+		A1B2C3D4000000000000102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1B2C3D40000000000000F00 /* YearlyWidgetExtension */;
+			targetProxy = A1B2C3D4000000000000103 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1B2C3D40000000000000F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY4LJM4BM2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/YearlyWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Yearly;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyp4tia.Yearly.YearlyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1B2C3D40000000000000F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY4LJM4BM2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Config/YearlyWidget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Yearly;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyp4tia.Yearly.YearlyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1B2C3D40000000000000FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A1B2C3D40000000000000FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1B2C3D40000000000000FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY4LJM4BM2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Yearly;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyp4tia.Yearly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1B2C3D40000000000000FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY4LJM4BM2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Yearly;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyp4tia.Yearly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1B2C3D40000000000000FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY4LJM4BM2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyp4tia.YearlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yearly.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yearly";
+			};
+			name = Debug;
+		};
+		A1B2C3D40000000000000FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RY4LJM4BM2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyp4tia.YearlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yearly.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yearly";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1B2C3D40000000000000F01 /* Build configuration list for PBXNativeTarget "YearlyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D40000000000000F02 /* Debug */,
+				A1B2C3D40000000000000F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B2C3D40000000000000F7 /* Build configuration list for PBXProject "Yearly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D40000000000000FA /* Debug */,
+				A1B2C3D40000000000000FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B2C3D40000000000000F8 /* Build configuration list for PBXNativeTarget "Yearly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D40000000000000FC /* Debug */,
+				A1B2C3D40000000000000FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B2C3D40000000000000F9 /* Build configuration list for PBXNativeTarget "YearlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D40000000000000FE /* Debug */,
+				A1B2C3D40000000000000FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1B2C3D40000000000000E1 /* Project object */;
+}
