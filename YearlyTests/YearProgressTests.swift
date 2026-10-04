@@ -121,4 +121,21 @@ final class YearProgressTests: XCTestCase {
         XCTAssertLessThanOrEqual(progress.elapsedDays, progress.totalDays)
         XCTAssertGreaterThanOrEqual(progress.daysRemaining, 0)
     }
+
+    func testAppearanceModeColorSchemes() {
+        XCTAssertNil(AppearanceMode.system.colorScheme)
+        XCTAssertEqual(AppearanceMode.light.colorScheme, .light)
+        XCTAssertEqual(AppearanceMode.dark.colorScheme, .dark)
+    }
+
+    func testAppearancePersistence() {
+        SharedStorage.saveAppearance(.dark)
+        XCTAssertEqual(SharedStorage.currentAppearance(), .dark)
+
+        SharedStorage.saveAppearance(.light)
+        XCTAssertEqual(SharedStorage.currentAppearance(), .light)
+
+        SharedStorage.saveAppearance(.system)
+        XCTAssertEqual(SharedStorage.currentAppearance(), .system)
+    }
 }

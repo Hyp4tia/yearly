@@ -81,15 +81,26 @@ struct AboutView: View {
                 }
 
                 Section {
-                    Link(destination: URL(string: "https://hyp4tia.github.io/yearly/privacy")!) {
+                    NavigationLink {
+                        PrivacyPolicyView()
+                    } label: {
                         HStack {
-                            Text("Full Privacy Policy")
+                            Label("Privacy Policy", systemImage: "hand.raised.fill")
+                            Spacer()
+                        }
+                    }
+
+                    Link(destination: URL(string: "https://hyp4tia.github.io/yearly/")!) {
+                        HStack {
+                            Text("Web Privacy Policy (GitHub Pages)")
                             Spacer()
                             Image(systemName: "arrow.up.right")
                                 .font(.footnote)
                                 .foregroundStyle(.secondary)
                         }
                     }
+                } header: {
+                    Text("Privacy & Transparency")
                 } footer: {
                     Text("Crafted for OLED displays and pure focus.")
                         .frame(maxWidth: .infinity, alignment: .center)

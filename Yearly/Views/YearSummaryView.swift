@@ -3,11 +3,16 @@ import SwiftUI
 /// "2d left · 99%" style summary shown under the grid.
 struct YearSummaryView: View {
     let progress: YearProgress
+    var isDark: Bool = false
+
+    private var remainingColor: Color {
+        isDark ? Color(red: 0.35, green: 0.55, blue: 0.98) : Color(red: 0.22, green: 0.44, blue: 0.90)
+    }
 
     var body: some View {
         HStack(spacing: 6) {
             Text(daysRemainingText)
-                .foregroundStyle(Color.summaryRemaining)
+                .foregroundStyle(remainingColor)
             Text(verbatim: "·")
                 .foregroundStyle(.secondary)
             Text(percentText)

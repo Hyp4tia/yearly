@@ -3,9 +3,19 @@ import SwiftUI
 /// One dot per day of the year, filled for days that have passed.
 struct YearGridView: View {
     let progress: YearProgress
+    var isDark: Bool = false
 
-    private let filledColor = Color.progressFilled
-    private let pendingColor = Color.progressPending
+    private var filledColor: Color {
+        isDark
+            ? Color(red: 0.35, green: 0.55, blue: 0.98)
+            : Color(red: 0.22, green: 0.44, blue: 0.90)
+    }
+
+    private var pendingColor: Color {
+        isDark
+            ? Color(white: 0.22)
+            : Color(white: 0.88)
+    }
 
     var body: some View {
         Canvas { context, size in
@@ -47,15 +57,15 @@ struct YearGridView: View {
 }
 
 #Preview("Dark") {
-    YearGridView(progress: YearProgress())
+    YearGridView(progress: YearProgress(), isDark: true)
         .padding()
-        .background(Color(uiColor: .systemBackground))
+        .background(Color.black)
         .preferredColorScheme(.dark)
 }
 
 #Preview("Light") {
-    YearGridView(progress: YearProgress())
+    YearGridView(progress: YearProgress(), isDark: false)
         .padding()
-        .background(Color(uiColor: .systemBackground))
+        .background(Color.white)
         .preferredColorScheme(.light)
 }

@@ -5,6 +5,7 @@ import WidgetKit
 
 struct ContentView: View {
     @AppStorage(AppearanceMode.storageKey) private var appearance: AppearanceMode = .system
+    @Environment(\.colorScheme) private var systemColorScheme
     @State private var showingAbout = false
     @State private var now = Date()
 
@@ -12,22 +13,41 @@ struct ContentView: View {
         YearProgress(date: now)
     }
 
-    var body: some View {
-        VStack(spacing: 0) {
-            YearGridView(progress: progress)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.horizontal, 28)
-                .padding(.top, 40)
-                .padding(.bottom, 32)
-
-            YearSummaryView(progress: progress)
-                .padding(.bottom, 28)
+    private var isDarkMode: Bool {
+        switch appearance {
+        case .system:
+            return systemColorScheme == .dark
+        case .light:
+            return false
+        case .dark:
+            return true
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.background)
+    }
+
+    private var appBackgroundColor: Color {
+        isDarkMode ? Color.black : Color.white
+    }
+
+    var body: some View {
+        ZStack {
+            appBackgroundColor
+                .ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                YearGridView(progress: progress, isDark: isDarkMode)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(.horizontal, 28)
+                    .padding(.top, 40)
+                    .padding(.bottom, 32)
+
+                YearSummaryView(progress: progress, isDark: isDarkMode)
+                    .padding(.bottom, 28)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
         .navigationTitle(Text(verbatim: String(progress.year)))
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(Color.background, for: .navigationBar)
+        .toolbarBackground(appBackgroundColor, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -35,7 +55,7 @@ struct ContentView: View {
                     showingAbout = true
                 } label: {
                     Image(systemName: "info.circle")
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(isDarkMode ? .white : .primary)
                         .accessibilityLabel(Text("About Yearly"))
                 }
             }
@@ -48,15 +68,18 @@ struct ContentView: View {
                                 .tag(mode)
                         }
                     }
+                    .pickerStyle(.inline)
                 } label: {
                     Image(systemName: appearance.iconName)
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(isDarkMode ? .white : .primary)
                         .accessibilityLabel(Text("Appearance: \(appearance.title)"))
                 }
             }
         }
+        .preferredColorScheme(appearance.colorScheme)
         .sheet(isPresented: $showingAbout) {
             AboutView()
+                .preferredColorScheme(appearance.colorScheme)
         }
         .onChange(of: appearance) { _, newMode in
             SharedStorage.saveAppearance(newMode)
@@ -93,7 +116,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+#Preview("Dark") {
     NavigationStack {
         ContentView()
     }
