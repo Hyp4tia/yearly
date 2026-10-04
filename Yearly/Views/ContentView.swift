@@ -5,7 +5,7 @@ import WidgetKit
 
 struct ContentView: View {
     @AppStorage(AppearanceMode.storageKey) private var appearance: AppearanceMode = .system
-    @Environment(\.colorScheme) private var systemColorScheme
+    @Environment(\.colorScheme) private var colorScheme
     @State private var showingAbout = false
     @State private var now = Date()
 
@@ -16,7 +16,7 @@ struct ContentView: View {
     private var isDarkMode: Bool {
         switch appearance {
         case .system:
-            return systemColorScheme == .dark
+            return colorScheme == .dark
         case .light:
             return false
         case .dark:
@@ -45,7 +45,9 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .navigationTitle(Text(verbatim: String(progress.year)))
+        #if canImport(UIKit)
+        .background(WindowStyleModifier(mode: appearance))
+        #endif
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(appBackgroundColor, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
@@ -55,9 +57,17 @@ struct ContentView: View {
                     showingAbout = true
                 } label: {
                     Image(systemName: "info.circle")
-                        .foregroundStyle(isDarkMode ? .white : .primary)
+                        .font(.body)
+                        .foregroundStyle(isDarkMode ? .white : .black)
                         .accessibilityLabel(Text("About Yearly"))
                 }
+            }
+
+            ToolbarItem(placement: .principal) {
+                Text(verbatim: String(progress.year))
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(isDarkMode ? .white : .black)
             }
 
             ToolbarItem(placement: .topBarTrailing) {
@@ -71,21 +81,22 @@ struct ContentView: View {
                     .pickerStyle(.inline)
                 } label: {
                     Image(systemName: appearance.iconName)
-                        .foregroundStyle(isDarkMode ? .white : .primary)
+                        .font(.body)
+                        .foregroundStyle(isDarkMode ? .white : .black)
                         .accessibilityLabel(Text("Appearance: \(appearance.title)"))
                 }
             }
         }
-        .preferredColorScheme(appearance.colorScheme)
         .sheet(isPresented: $showingAbout) {
             AboutView()
-                .preferredColorScheme(appearance.colorScheme)
         }
         .onChange(of: appearance) { _, newMode in
             SharedStorage.saveAppearance(newMode)
+            SharedStorage.applyUserInterfaceStyle(newMode)
         }
         .task {
             SharedStorage.saveAppearance(appearance)
+            SharedStorage.applyUserInterfaceStyle(appearance)
             await refreshAtMidnight()
         }
     }
@@ -120,12 +131,10 @@ struct ContentView: View {
     NavigationStack {
         ContentView()
     }
-    .preferredColorScheme(.dark)
 }
 
 #Preview("Light") {
     NavigationStack {
         ContentView()
     }
-    .preferredColorScheme(.light)
 }

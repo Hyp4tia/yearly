@@ -2,6 +2,9 @@ import SwiftUI
 #if canImport(WidgetKit)
 import WidgetKit
 #endif
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// The appearance mode options for Yearly.
 enum AppearanceMode: String, CaseIterable, Identifiable {
@@ -34,6 +37,19 @@ enum AppearanceMode: String, CaseIterable, Identifiable {
             return "moon.fill"
         }
     }
+
+    #if canImport(UIKit)
+    var userInterfaceStyle: UIUserInterfaceStyle {
+        switch self {
+        case .system:
+            return .unspecified
+        case .light:
+            return .light
+        case .dark:
+            return .dark
+        }
+    }
+    #endif
 
     var colorScheme: ColorScheme? {
         switch self {
@@ -68,4 +84,51 @@ enum SharedStorage {
             ?? UserDefaults.standard.string(forKey: AppearanceMode.storageKey)
         return AppearanceMode(rawValue: raw ?? "") ?? .system
     }
+
+    @MainActor
+    static func applyUserInterfaceStyle(_ mode: AppearanceMode) {
+        #if canImport(UIKit)
+        let style = mode.userInterfaceStyle
+        for scene in UIApplication.shared.connectedScenes {
+            guard let windowScene = scene as? UIWindowScene else { continue }
+            for window in windowScene.windows {
+                window.overrideUserInterfaceStyle = style
+            }
+        }
+        #endif
+    }
 }
+
+#if canImport(UIKit)
+final class WindowStyleObserverView: UIView {
+    var mode: AppearanceMode = .system {
+        didSet {
+            apply()
+        }
+    }
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        apply()
+    }
+
+    private func apply() {
+        window?.overrideUserInterfaceStyle = mode.userInterfaceStyle
+    }
+}
+
+struct WindowStyleModifier: UIViewRepresentable {
+    let mode: AppearanceMode
+
+    func makeUIView(context: Context) -> WindowStyleObserverView {
+        let view = WindowStyleObserverView()
+        view.isHidden = true
+        view.mode = mode
+        return view
+    }
+
+    func updateUIView(_ uiView: WindowStyleObserverView, context: Context) {
+        uiView.mode = mode
+    }
+}
+#endif
