@@ -8,7 +8,7 @@ struct AboutView: View {
             List {
                 Section {
                     VStack(spacing: 12) {
-                        Image("AppIcon")
+                        Image("YearlyIcon")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 80, height: 80)
